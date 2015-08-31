@@ -1,14 +1,17 @@
 
-
+%cnnMTlayer.m
+%
 % author: steeve laquitaine
 %   date: 08/15/2015
 %purpose: a convolutional neural layer that mimics V1 (primary visual cortex) processing
 %		  of motion stimuli
+%
+% usage :
+%
+%			o = cnnMTlayer(v1Responses)
 
-function cnnV1layer(movie)
+function o = cnnMTlayer(v1Responses)
 
-%V1 filters (RF)
-load v1SpatialFilters.mat
-load v1TemporalFilters.mat
 
-%convolve movie with filters
+%spatial pooling of v1 Responses
+
